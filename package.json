@@ -2,7 +2,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && json-server --watch db/db.json",
+    "build": "next build && json-server -p 3006 -w db/db.json",
     "start": "next start",
     "lint": "next lint"
   },
