@@ -41,12 +41,15 @@ export default function Home() {
   return (
     <Layout>
       <h1 className="text-2xl ">Selamat Datang</h1>
-      <p className="text-xs">Klik Gambar bangun datar atau bangun ruang untuk melakukan perhitungan</p>
+      <p className="text-xs">Klik Gambar bangun untuk melakukan perhitungan</p>
       {/* pilihan bangun datar dan bangun ruang */}
       <div className="flex gap-4 bg-gray-200 p-4 rounded-lg">
         {listBangun.map((value, index) => (
-          <div className="w-full" key={index} onClick={() => setChoose(value)}>
-            <img className="hover:bg-gray-100 cursor-pointer md:w-24 md:h-24" src={value.image} alt={value.name} />
+          <div className={`w-full ${value.name === choose.name && 'bg-white rounded-lg '} p-2`} key={index} onClick={() => setChoose(value)}>
+            <img className="hover:bg-gray-100 mx-auto cursor-pointer md:w-24 md:h-24" src={value.image} alt={value.name} />
+            <p className="text-center text-gray-600">
+              {value.name}
+            </p>
           </div>
         ))}
       </div>
