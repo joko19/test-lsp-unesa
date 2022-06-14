@@ -2,12 +2,13 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && json-server -p 3006 -w db/db.json",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
     "apexcharts": "^3.35.3",
+    "firebase": "^9.8.3",
     "fs": "^0.0.1-security",
     "json-server": "^0.17.0",
     "next": "12.1.4",
