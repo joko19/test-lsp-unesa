@@ -47,9 +47,11 @@ export default function Home() {
         {listBangun.map((value, index) => (
           <div className={`w-full ${value.name === choose.name && 'bg-white rounded-lg '} p-2`} key={index} onClick={() => setChoose(value)}>
             <img className="hover:bg-gray-100 mx-auto cursor-pointer md:w-24 md:h-24" src={value.image} alt={value.name} />
-            <p className="text-center text-gray-600">
-              {value.name}
-            </p>
+            <div className="hidden md:flex ">
+              <p className="text-center m-auto text-gray-600">
+                {value.name}
+              </p>
+            </div>
           </div>
         ))}
       </div>

@@ -1,10 +1,8 @@
 import { useRouter } from "next/router";
 import Link from 'next/link'
-import { AiOutlinePercentage, AiOutlineHome, AiOutlineShoppingCart, AiFillDatabase } from 'react-icons/ai'
-import { IoStatsChart, IoShareSocial } from 'react-icons/io5'
-import { FiCalendar } from 'react-icons/fi'
-import { HiOutlineUsers } from 'react-icons/hi'
-import { MdOutlinePriceCheck, MdOutlineInsights, MdShoppingCart, MdMenu } from 'react-icons/md'
+import { AiOutlineHome, AiFillDatabase } from 'react-icons/ai'
+import { MdOutlineInsights, MdMenu } from 'react-icons/md'
+import {CgProfile} from 'react-icons/cg'
 import { useState } from "react";
 
 function Sidebar() {
@@ -44,6 +42,13 @@ function Sidebar() {
                                 </a>
                             </Link>
                         </div>
+                        <div className={`${path === '/profile' ? 'text-white bg-green-500 shadow-lg rounded-r border-l' : ' text-white'} flex justify-between px-2`}>
+                            <Link href='/profile' >
+                                <a className={`flex gap-4 inline-block block py-1 text-black-3 `}>
+                                    <CgProfile color='white' className="my-auto" /><span className="text-sm"> Profile</span>
+                                </a>
+                            </Link>
+                        </div>
                     </div>
                 </ul>
             </div>
@@ -70,6 +75,13 @@ function Sidebar() {
                         <Link href='/statistic' >
                             <a className={`flex gap-4 mt-1 inline-block block py-1 text-black-3 `}>
                                 <MdOutlineInsights color='white' /><span className="text-sm"> Statistic</span>
+                            </a>
+                        </Link>
+                    </div>
+                    <div className={`${path === '/profile' ? 'text-white bg-green-500 shadow-lg rounded-r border-l' : ' text-white'} flex justify-between px-2`}>
+                        <Link href='/profile' >
+                            <a className={`flex gap-4 mt-1 inline-block block py-1 text-black-3 `}>
+                                <CgProfile color='white' /><span className="text-sm"> Profile</span>
                             </a>
                         </Link>
                     </div>

@@ -4,8 +4,8 @@ export default function Kubus() {
 const [sisi, setSisi] = useState(0)
 
     return (
-        <div className="flex bg-gray-100 mt-4 p-4 rounded-lg gap-4">
-            <div>
+        <div className="flex flex-col md:flex-row bg-gray-100 mt-4 p-4 rounded-lg gap-4">
+            <div className="flex flex-col">
                 <img className="hover:bg-gray-100 cursor-pointer md:w-36 md:h-36" src='/images/kubus.png' />
                 <div className="bg-white p-2 text-center rounded">
                     L = s x s x s
