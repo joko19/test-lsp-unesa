@@ -1,28 +1,12 @@
 import { useState } from "react"
-import {dbInstance } from '../../config/fire-config'
-import {addDoc } from 'firebase/firestore';
+import { saveToDatabase } from "../../pages/api/api";
 
 export default function Limas() {
 const [sisi, setSisi] = useState(0)
 const [tinggi, setTinggi] = useState(0)
-
-const data = {
-    "name": "Joko",
-    "school": "smkn 1 mojokerto",
-    "age": 17,
-    "address": "Sidoarjo",
-    "phone": "085123123123",
-    "bangun": "Limas",
-    "hasil": 1/3 * sisi * sisi * tinggi
-}
 const onSubmit = () => {
-    console.log("hello world")
-    console.log(data)
-    addDoc(dbInstance, {
-        data
-    })
+    saveToDatabase("Limas", 1/3 * sisi * sisi * tinggi)
 }
-
     return (
         <div className="flex flex-col md:flex-row bg-gray-100 mt-4 p-4 rounded-lg gap-4">
             <div className="flex flex-col">

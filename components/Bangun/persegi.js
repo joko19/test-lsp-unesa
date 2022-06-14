@@ -1,24 +1,10 @@
 import { useState } from "react"
-import {dbInstance } from '../../config/fire-config'
-import {addDoc } from 'firebase/firestore';
+import { saveToDatabase } from "../../pages/api/api";
 
 export default function Persegi() {
     const [sisi, setSisi] = useState(0)
-    const data = {
-        "name": "Joko",
-        "school": "smkn 1 mojokerto",
-        "age": 17,
-        "address": "Sidoarjo",
-        "phone": "085123123123",
-        "bangun": "Persegi",
-        "hasil": sisi * sisi 
-    }
     const onSubmit = () => {
-        console.log("hello world")
-        console.log(data)
-        addDoc(dbInstance, {
-            data
-        })
+        saveToDatabase("Persegi", sisi * sisi)
     }
 
     return (

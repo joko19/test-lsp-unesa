@@ -1,5 +1,4 @@
 import Layout from "../Layout/Layout"
-import db from './api/db.json'
 import { useState } from "react"
 import { dbInstance } from "../config/fire-config";
 import { collection, addDoc, getDocs } from 'firebase/firestore';
