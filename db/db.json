@@ -1,0 +1,34 @@
+{
+    "history":[
+        {
+            "date": "waktu",
+            "name": "Joko",
+            "school":"smkn 1 mojokerto",
+            "age": 17,
+            "address": "Sidoarjo",
+            "phone": "085123123123",
+            "bangun": "Persegi",
+            "hasil": 64
+        },
+        {
+            "date": "waktu",
+            "name": "Joko",
+            "school":"smkn 1 mojokerto",
+            "age": 17,
+            "address": "Sidoarjo",
+            "phone": "085123123123",
+            "bangun": "Persegi",
+            "hasil": 64
+        },
+        {
+            "date": "waktu",
+            "name": "Joko",
+            "school":"smkn 1 mojokerto",
+            "age": 17,
+            "address": "Sidoarjo",
+            "phone": "085123123123",
+            "bangun": "Persegi",
+            "hasil": 64
+        }
+    ]
+}
