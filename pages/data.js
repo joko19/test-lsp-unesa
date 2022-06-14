@@ -15,11 +15,11 @@ export default function Home() {
         <table className="border mx-auto" >
           <tr className="border">
             {tHead.map((value, index) => (
-              <th className="w-48 p-3">{value}</th>
+              <th className="w-48 p-3" key={index}>{value}</th>
             ))}
           </tr>
           {data.map((value, index) => (
-            <tr className="text-center text-gray-500 ">
+            <tr className="text-center text-gray-500" key={index}>
               <td className="p-3">{value.name}</td>
               <td className="p-3">{value.school}</td>
               <td className="p-3">{value.age}</td>
