@@ -3,9 +3,8 @@ import db from '../db/db.json'
 import { useState } from "react"
 
 export default function Home() {
-  const [data, setData] = useState(db.history)
+  const [data, setData] = useState(db)
   const tHead = ['Nama', 'Sekolah', 'Usia', 'Alamat', 'Telp', 'Bangun', 'Hasil']
-  console.log(db.history)
   return (
     <Layout>
       <h1 className="text-3xl font-bold text-center">

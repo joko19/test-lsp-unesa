@@ -1,7 +1,7 @@
 {
     "history":[
         {
-            "date": "waktu",
+            "dataCreated": "waktu",
             "name": "Joko",
             "school":"smkn 1 mojokerto",
             "age": 17,
@@ -11,7 +11,7 @@
             "hasil": 64
         },
         {
-            "date": "waktu",
+            "dataCreated": "waktu",
             "name": "Joko",
             "school":"smkn 1 mojokerto",
             "age": 17,
@@ -21,7 +21,7 @@
             "hasil": 64
         },
         {
-            "date": "waktu",
+            "dataCreated": "waktu",
             "name": "Joko",
             "school":"smkn 1 mojokerto",
             "age": 17,

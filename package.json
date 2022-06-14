@@ -2,12 +2,14 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && json-server --watch db/db.json",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
     "apexcharts": "^3.35.3",
+    "fs": "^0.0.1-security",
+    "json-server": "^0.17.0",
     "next": "12.1.4",
     "react": "18.0.0",
     "react-apexcharts": "^1.4.0",
