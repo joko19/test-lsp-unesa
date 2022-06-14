@@ -1,5 +1,3 @@
-// const fs = require('fs');
-import fs from 'fs'
 import { useState } from "react"
 
 export default function Kubus() {
@@ -14,7 +12,7 @@ const data = {
     "hasil": 64
 }
 const onSubmit = () => {
-    fs.writeFileSync('./example.json', JSON.stringify(data))
+    // fs.writeFileSync('./example.json', JSON.stringify(data))
 }
 
     return (
