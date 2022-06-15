@@ -28,13 +28,13 @@ function Sidebar() {
                                 </a>
                             </Link>
                         </div>
-                        <div className={`${path === '/statistic' ? 'text-white bg-green-500 shadow-lg rounded-r border-l' : ' text-white'} flex justify-between px-2`}>
+                        {/* <div className={`${path === '/statistic' ? 'text-white bg-green-500 shadow-lg rounded-r border-l' : ' text-white'} flex justify-between px-2`}>
                             <Link href='/statistic' >
                                 <a className={`flex gap-4 inline-block block py-1 text-black-3 `}>
                                     <MdOutlineInsights color='white' className="my-auto" /><span className="text-sm"> Statistic</span>
                                 </a>
                             </Link>
-                        </div>
+                        </div> */}
                         <div className={`${path === '/data' ? 'text-white bg-green-500 shadow-lg rounded-r border-l' : ' text-white'} flex justify-between px-2`}>
                             <Link href='/data' >
                                 <a className={`flex gap-4 inline-block block py-1 text-black-3 `}>
@@ -57,13 +57,13 @@ function Sidebar() {
                             </a>
                         </Link>
                     </div>
-                    <div className={`${path === '/statistic' ? 'text-white bg-green-500 shadow-lg rounded-r border-l' : ' text-white'} flex justify-between px-2`}>
+                    {/* <div className={`${path === '/statistic' ? 'text-white bg-green-500 shadow-lg rounded-r border-l' : ' text-white'} flex justify-between px-2`}>
                         <Link href='/statistic' >
                             <a className={`flex gap-4 mt-1 inline-block block py-1 text-black-3 `}>
                                 <MdOutlineInsights color='white' /><span className="text-sm"> Statistic</span>
                             </a>
                         </Link>
-                    </div>
+                    </div> */}
                     <div className={`${path === '/data' ? 'text-white bg-green-500 shadow-lg rounded-r border-l' : ' text-white'} flex justify-between px-2`}>
                         <Link href='/data' >
                             <a className={`flex gap-4 mt-1 inline-block block py-1 text-black-3 `}>
