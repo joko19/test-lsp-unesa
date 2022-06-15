@@ -1,11 +1,20 @@
 import { useState } from "react"
 import { saveToDatabase } from "../../pages/api/api";
 import { CSVLink} from "react-csv";
+import { useToast } from '@chakra-ui/react'
 
 export default function Lingkaran() {
+    const toast = useToast()
 const [jarijari, setJarijari] = useState(0) 
 const onSubmit = () => {
     saveToDatabase("Lingkaran", 22/7 * jarijari * jarijari)
+    toast({
+        title: 'Data saved',
+        status: 'success',
+        position: 'top-right',
+        duration: 1000,
+        isClosable: true,
+      })
 }
 const data = [{
     "dataCreated": Date.now(),

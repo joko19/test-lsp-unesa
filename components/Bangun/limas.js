@@ -1,12 +1,21 @@
 import { useState } from "react"
 import { saveToDatabase } from "../../pages/api/api";
 import { CSVLink} from "react-csv";
+import { useToast } from '@chakra-ui/react'
 
 export default function Limas() {
+    const toast = useToast()
 const [sisi, setSisi] = useState(0)
 const [tinggi, setTinggi] = useState(0)
 const onSubmit = () => {
     saveToDatabase("Limas", 1/3 * sisi * sisi * tinggi)
+    toast({
+        title: 'Data saved',
+        status: 'success',
+        position: 'top-right',
+        duration: 1000,
+        isClosable: true,
+      })
 }
 const data = [{
     "dataCreated": Date.now(),
