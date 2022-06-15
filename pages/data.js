@@ -1,24 +1,46 @@
 import Layout from "../Layout/Layout"
 import { useState } from "react"
 import { dbInstance } from "../config/fire-config";
-import { collection, addDoc, getDocs } from 'firebase/firestore';
+import { collection, addDoc, getDocs, query, orderBy, limit } from 'firebase/firestore';
 import { useEffect } from "react";
+
+function dynamicSort(property) {
+  var sortOrder = 1;
+  if (property[0] === "-") {
+    sortOrder = -1;
+    property = property.substr(1);
+  }
+  return function (a, b) {
+    /* next line works with strings and numbers, 
+     * and you may want to customize it to your needs
+     */
+    var result = (a[property] < b[property]) ? -1 : (a[property] > b[property]) ? 1 : 0;
+    return result * sortOrder;
+  }
+}
 
 export default function Home() {
   const [data, setData] = useState([])
+  const tHead = ['Nama', 'Sekolah', 'Usia', 'Alamat', 'Telp', 'Bangun', 'Hasil']
 
   useEffect(() => {
     getDocs(dbInstance)
       .then((data) => {
         setData(data.docs.map((item) => {
-          console.log(item.data())
-          return {...item.data()}
+          // console.log(item.data())
+          return { ...item.data() }
         }));
       })
   }, [])
 
-  console.log(data)
-  const tHead = ['Nama', 'Sekolah', 'Usia', 'Alamat', 'Telp', 'Bangun', 'Hasil']
+  const sorting = () => {
+
+  }
+
+
+  // var sortedObjs = _.sortBy(data, 'name');
+  // console.log(sortedObjs)
+
   return (
     <Layout>
       <h1 className="text-3xl font-bold text-center">

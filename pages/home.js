@@ -6,6 +6,7 @@ import Lingkaran from "../components/Bangun/lingkaran"
 import Kubus from "../components/Bangun/kubus"
 import Limas from "../components/Bangun/limas"
 import Tabung from "../components/Bangun/tabung"
+import { CSVLink, CSVDownload } from "react-csv";
 
 const ISSERVER = typeof window === "undefined";
 export default function Home() {
